@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RowActionExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1QM-Ri-uXL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StarCell" rowHeight="40" id="A1t-d3-Q3O" customClass="StarCell" customModule="RowActionExamples" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A1t-d3-Q3O" id="z4b-m2-TEW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgm-5e-Sqz">
+                                                    <rect key="frame" x="166" y="9.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="nlR-1I-mJy">
+                                                    <rect key="frame" x="5" y="5" width="30" height="29.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="iki-ZE-Nyw"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xgm-5e-Sqz" firstAttribute="centerY" secondItem="z4b-m2-TEW" secondAttribute="centerY" id="0E6-7E-btb"/>
+                                                <constraint firstItem="nlR-1I-mJy" firstAttribute="centerY" secondItem="z4b-m2-TEW" secondAttribute="centerY" id="1vZ-xk-nvY"/>
+                                                <constraint firstItem="nlR-1I-mJy" firstAttribute="leading" secondItem="z4b-m2-TEW" secondAttribute="leading" constant="5" id="Dc8-4f-6vr"/>
+                                                <constraint firstItem="nlR-1I-mJy" firstAttribute="top" secondItem="z4b-m2-TEW" secondAttribute="top" constant="5" id="cIn-G0-bUa"/>
+                                                <constraint firstAttribute="bottom" secondItem="nlR-1I-mJy" secondAttribute="bottom" constant="5" id="q11-w9-29r"/>
+                                                <constraint firstItem="Xgm-5e-Sqz" firstAttribute="centerX" secondItem="z4b-m2-TEW" secondAttribute="centerX" id="skH-KE-58l"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="starImage" destination="nlR-1I-mJy" id="MBQ-cB-bNl"/>
+                                            <outlet property="titleLabel" destination="Xgm-5e-Sqz" id="FEn-Ud-HEM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1QM-Ri-uXL" secondAttribute="trailing" id="7ko-SS-CyG"/>
+                            <constraint firstItem="1QM-Ri-uXL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hu2-pb-lDD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1QM-Ri-uXL" secondAttribute="bottom" id="aJC-Kh-VxE"/>
+                            <constraint firstItem="1QM-Ri-uXL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fNw-8a-VXW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="starTable" destination="1QM-Ri-uXL" id="X7X-h5-Mx2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Star" width="2000" height="2000"/>
+    </resources>
+</document>
